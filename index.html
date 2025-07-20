@@ -1,23 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Basil Leju</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="main">
-    <div class="text-box">
-      <h1>Hi,</h1>
-      <h2>I'm <span id="type-text" class="bold-text"></span></h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basil Leju</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Rotating Navigation -->
+    <div class="nav-container">
+      <!-- Navigation items positioned to the left of the circle -->
+      <div class="nav-item active" data-section="about">
+        <span>About</span>
+      </div>
+      <div class="nav-item" data-section="work">
+        <span>Work</span>
+      </div>
+      <div class="nav-item" data-section="hobby">
+        <span>Hobby</span>
+      </div>
     </div>
-    <img src="simple.png" alt="Basil Leju" class="profile-img" />
-  </div>
 
-  <script src="script.js"></script>
-</body>
+    <div class="main">
+      <div class="text-box">
+        <h1>Hi,</h1>
+        <h2>I'm <span id="type-text" class="bold-text"></span></h2>
+      </div>
+
+      <!-- Content Sections -->
+      <div class="content-sections">
+        <!-- About Section -->
+        <div class="content-section active" id="about-section">
+          <div class="about-card desktop-only">
+            <h3>About Me</h3>
+            <p>
+              Results-driven Software Engineer with expertise in
+              <strong>C#</strong>, <strong>ASP.NET Core</strong>, and
+              <strong>Entity Framework Core</strong>. Skilled in building scalable
+              applications, RESTful APIs, and real-time services using
+              <strong>SignalR</strong> and <strong>MVC</strong> architecture.
+              <br /><br />
+              Awarded <strong>SOTI MVP 2024</strong> for technical excellence.
+              <br /><br />
+              Engineered impactful self-initiated projects in IoT, HR systems, and
+              image processing using <strong>React</strong>,
+              <strong>Django</strong>, <strong>Flask</strong>, and
+              <strong>Arduino</strong>, showcasing strong problem-solving skills and
+              end-to-end solution delivery.
+            </p>
+          </div>
+        </div>
+
+        <!-- Work Experience Section -->
+        <div class="content-section" id="work-section">
+          <div class="about-card desktop-only">
+            <h3>Work Experience</h3>
+            <div class="experience-item">
+              <h4>Software Engineer</h4>
+              <p class="company">SOTI Inc.</p>
+              <p class="duration">2022 - Present</p>
+              <p>
+                Developing enterprise mobility management solutions using
+                <strong>C#</strong>, <strong>ASP.NET Core</strong>, and
+                <strong>Entity Framework Core</strong>. Recognized as
+                <strong>SOTI MVP 2024</strong> for outstanding technical contributions.<br /><br />
+                Engineered and optimized Windows background services using <strong>.NET Core</strong> for high-throughput data processing, leading to a 40%
+ increase in processing speed and a 25% reduction in server resource usage across multiple deployments
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hobby Section -->
+        <div class="content-section" id="hobby-section">
+          <div class="about-card desktop-only">
+            <h3>Hobbies & Interests</h3>
+            <div class="hobby-grid">
+              <div class="hobby-item">
+                <h4>📸 Photography</h4>
+                <p>Capturing moments and exploring creative compositions through digital photography.</p>
+              </div>
+              <div class="hobby-item">
+                <h4>🔧 Arduino Projects</h4>
+                <p>Building IoT devices and automation systems for home and personal use.</p>
+              </div>
+              <div class="hobby-item">
+                <h4>💻 Open Source</h4>
+                <p>Contributing to community projects and sharing knowledge through code.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img src="simple.png" alt="Basil Leju" class="profile-img" />
+
+      <!-- Mobile Content -->
+      <div class="mobile-content">
+        <div class="about-mobile active" id="about-mobile">
+          <h3>About Me</h3>
+          <p>
+            Results‑driven Software Engineer with expertise in
+            <strong>C#</strong>, <strong>ASP.NET Core</strong>, and
+            <strong>Entity Framework Core</strong>. Skilled in building scalable
+            applications, RESTful APIs, and real‑time services using
+            <strong>SignalR</strong> and <strong>MVC</strong> architecture.
+            <br /><br />
+            Awarded <strong>SOTI MVP 2024</strong> for technical excellence.<br /><br />
+            Engineered impactful self‑initiated projects in IoT, HR systems, and
+            image processing using <strong>React</strong>,
+            <strong>Django</strong>, <strong>Flask</strong>, and
+            <strong>Arduino</strong>, showcasing strong problem‑solving skills and
+            end‑to‑end solution delivery.
+          </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
