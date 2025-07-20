@@ -326,17 +326,21 @@ h2 {
   transform: translateX(-50%);
   width: 260px; /* ⬅️ increased from 180px */
   height: auto;
+  z-index: 100;
 }
 
 @media (min-width: 768px) {
   .profile-img {
     width: 280px;
+    z-index: 100;;
   }
 }
 
 @media (min-width: 1024px) {
   .profile-img {
     width: 340px;
+        z-index: 100;;
+
   }
 }
 
@@ -487,9 +491,95 @@ h2 {
     width: 200px;
     margin: 0 0 -10px 0;
     flex-shrink: 0;
+    z-index: 100;
   }
   
   .mobile-content {
     margin-bottom: 80px;
   }
 }
+
+.photo-shelf {
+  position: absolute;
+  left: calc(50% + 70px); /* to the right of profile image */
+  bottom: 370px;           /* above profile image */
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.photo-row {
+  display: flex;
+  gap: 12px;
+}
+
+.bottom-row {
+  transform: translateX(20px); /* center the 2 photos under the top row */
+}
+
+.shelf-photo {
+  width: 85px;
+  height: 70px;
+  object-fit: cover;
+
+  /* Frame effect */
+  /* padding: 5px; */
+  border: 4px solid rgb(28, 28, 28);
+  border-radius: 7px;
+
+  /* 3D perspective */
+  transform-style: preserve-3d;
+  transform-origin: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow:
+    4px 10px 20px rgba(0, 0, 0, 0.25),
+    -1px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover: bring to front and flatten */
+.shelf-photo:hover {
+  transform: rotateY(0deg) scale(1.05);
+  box-shadow:
+    6px 12px 24px rgba(0, 0, 0, 0.4),
+    0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.vertical{
+    width: 70px;
+  height: 85px;
+}
+
+@media (max-width: 768px) {
+  .photo-shelf {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    transform: translateX(-50%);
+    z-index: 0; /* below the head */
+      gap: 6px;
+  }
+
+  .profile-img {
+    width: 140px;
+    z-index: 10; /* ensure it's above the shelf */
+  }
+
+  .photo-row {
+    justify-content: center;
+    gap : 4px;
+  }
+
+  .shelf-photo {
+    width: 40px;
+    height: 30px;
+  }
+
+  .vertical{
+    width: 30px;
+  height: 40px;
+}
+}
+
